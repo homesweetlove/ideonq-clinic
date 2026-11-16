@@ -5,6 +5,7 @@ This repository was created with a **new, unrelated Git history**. It is a separ
 ## Explicitly included
 
 - Hand-authored, dependency-free static UI and tests.
+- Redistributable SVG icon geometry with attribution in `THIRD_PARTY.md`.
 - Clearly fictional, in-memory patient and employee labels.
 - Product-level descriptions and abstract component boundaries.
 

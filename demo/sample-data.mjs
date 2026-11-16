@@ -3,7 +3,7 @@
 export const clinic = Object.freeze({
   name: '샘플 클리닉',
   subtitle: '독립형 업무 흐름 데모',
-  dayLabel: '가상의 진료일 · 10월 20일',
+  dayLabel: '시연용 일정 · 가상 진료일',
 });
 
 export const roleOptions = Object.freeze([

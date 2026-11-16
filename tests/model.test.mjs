@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { addSyntheticReception, changeStatus, filterPatients, getPatient, initialState, metrics, toggleTask } from '../demo/model.mjs';
+import { addSyntheticReception, changeStatus, filterPatients, getPatient, initialState, metrics, toggleTask, visibleViews } from '../demo/model.mjs';
 import { clinic, sampleAppointments, samplePatients } from '../demo/sample-data.mjs';
 
 test('fixtures are obviously synthetic, not imported patient records', () => {
@@ -50,4 +50,11 @@ test('operational checklist toggles only a synthetic task', () => {
   assert.equal(toggleTask(state, 'DEMO-T-002'), true);
   assert.equal(metrics(state).pendingTasks, 2);
   assert.equal(toggleTask(state, 'NOT-FOUND'), false);
+});
+
+test('role-specific demo navigation is explicitly a presentation subset', () => {
+  assert.deepEqual(visibleViews('doctor'), ['overview', 'schedule', 'records']);
+  assert.deepEqual(visibleViews('staff'), ['overview', 'reception', 'schedule', 'operations']);
+  assert.equal(visibleViews('admin').length, 5);
+  assert.equal(visibleViews('unknown').length, 5);
 });

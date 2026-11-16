@@ -13,6 +13,16 @@ export const appointmentLabels = Object.freeze({
 
 export const views = Object.freeze(['overview', 'reception', 'schedule', 'records', 'operations']);
 
+const roleViews = Object.freeze({
+  admin: views,
+  doctor: ['overview', 'schedule', 'records'],
+  staff: ['overview', 'reception', 'schedule', 'operations'],
+});
+
+export function visibleViews(role) {
+  return roleViews[role] ?? views;
+}
+
 export function initialState() {
   return {
     view: 'overview',
@@ -20,6 +30,10 @@ export function initialState() {
     query: '',
     receptionFilter: 'all',
     selectedPatient: null,
+    tourStep: -1,
+    tourPatientId: null,
+    mobileMenuOpen: false,
+    lastUpdatedPatient: null,
     patients: samplePatients.map(person => ({ ...person })),
     appointments: sampleAppointments.map(appointment => ({ ...appointment })),
     tasks: sampleTasks.map(task => ({ ...task })),

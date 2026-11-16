@@ -2,11 +2,13 @@
 
 [한국어](#한국어) | [English](#english)
 
+[**▶ 웹에서 인터랙티브 데모 체험하기**](https://ideonq-clinic.vercel.app)
+
 > **Public demonstration only.** Every person, record, schedule, clinic, and event shown here is invented. This repository contains **no production backend, real health records, authentication system, database schema, credentials, or deployment configuration.**
 
 ## 한국어
 
-IDEONQ Clinic의 제품 방향과 화면 흐름을 소개하는 **독립형 오프라인 데모**입니다. 실제 의료기관 운영 시스템을 공개하거나 실환자 정보를 사용하는 프로젝트가 아닙니다.
+IDEONQ Clinic의 제품 방향과 화면 흐름을 소개하는 **독립형 정적 웹 데모**입니다. 실제 의료기관 운영 시스템을 공개하거나 실환자 정보를 사용하는 프로젝트가 아닙니다.
 
 ### 미리 보기
 
@@ -15,6 +17,8 @@ IDEONQ Clinic의 제품 방향과 화면 흐름을 소개하는 **독립형 오�
 - 가상 차트와 초안 화면
 - 직원 운영 체크리스트
 - 관리자·의사·접수 역할 전환 *UI 시뮬레이션*
+- **4단계 가이드 데모** — 가상 접수 생성 → 호출 → 가상 차트 확인 → 완료
+- 화면 크기에 대응하는 반응형 레이아웃, 상세 패널, 상태 전환 모션
 
 모든 조작은 브라우저 메모리에서만 이루어지며 새로고침 시 초기화됩니다. 서버 요청, 쿠키, 로컬 저장소, 계정 로그인, 분석 도구가 없습니다. 역할 전환은 **보안 권한 구현이 아닌 UI 시뮬레이션**입니다.
 
@@ -46,10 +50,13 @@ npm test
 이 데모는 제품의 **업무 흐름과 인터페이스를 설명하기 위한 축약본**입니다. 실제 진료기록 작성, 개인정보 처리, 의료기관 운영, 보안 수준 증명 또는 실서비스 배포에 사용하면 안 됩니다.
 
 공개/비공개 분리 원칙은 [공개 범위](docs/PUBLIC-SCOPE.md), 단순화한 구조는 [아키텍처](docs/ARCHITECTURE.md)를 참고하세요.
+아이콘의 라이선스 고지는 [THIRD_PARTY.md](THIRD_PARTY.md)에 있습니다.
 
 ## English
 
 IDEONQ Clinic Public Showcase is a **standalone, offline, synthetic-data UI demo** illustrating reception, appointments, sample chart views, and staff operations.
+
+**[Launch the interactive web demo](https://ideonq-clinic.vercel.app)** — includes a four-step guided workflow, responsive layout, and synthetic chart drawer.
 
 - No API calls, sign-in, cookies, analytics, browser storage, or external dependencies.
 - All sample patients, appointments and clinic names are explicitly fictional.

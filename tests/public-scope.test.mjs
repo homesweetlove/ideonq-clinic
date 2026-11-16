@@ -25,7 +25,7 @@ async function candidatePaths() {
 
 test('the public repository contains only approved source and documentation locations', async () => {
   const all = await candidatePaths();
-  const allowed = [ '.gitignore', 'README.md', 'SECURITY.md', 'LICENSE', 'package.json', 'vercel.json' ];
+  const allowed = [ '.gitignore', 'README.md', 'SECURITY.md', 'LICENSE', 'THIRD_PARTY.md', 'package.json', 'vercel.json' ];
   assert.ok(all.every(path => allowed.includes(path) || /^(demo|docs|tests|tools|\.github)\//.test(path)), `unexpected tracked files: ${all}`);
   assert.ok(all.every(path => !/(\.env|\.sqlite|\.db$|\.key$|\.pem$|\.p12$|\.pfx$|\.jks$|\.log$|\.png$|\.jpg$|\.zip$)/i.test(path)));
 });
